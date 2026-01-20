@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Pages/Home'
+import Navbar from './Components/layout/Navbar'
 
 
 
@@ -7,7 +8,9 @@ import Home from './Pages/Home'
 const App = () => {
   return (
     <div className=' h-screen w-full'>
+      <Navbar />
       <Home />
+   
 
 
     </div>
