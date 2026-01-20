@@ -1,6 +1,6 @@
 const HighlightComp = ({ e }) => {
   return (
-    <div className="w-1/3 h-full  border-gray-400/30 border flex justify-center flex-col overflow-hidden items-center">
+    <div className="w-1/3 h-full  border-gray-400/30 bg-white border flex justify-center flex-col overflow-hidden items-center">
       <span className="font-mont font-bold text-xl">
         {e.mText}
         <sup className="text-gray-400 font-normal text-[12px]">
