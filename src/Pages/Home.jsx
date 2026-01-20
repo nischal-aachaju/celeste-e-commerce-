@@ -1,7 +1,19 @@
-import React from 'react'
+
 import { ArrowRight } from 'lucide-react'
 import CollectionsSection from '../Components/common/CollectionsSection'
-const Home = ({api}) => {
+import { ApiDataContext } from '../Context/ContextApi'
+import { useContext } from 'react'
+
+const Home = () => {
+    const data = useContext(ApiDataContext)
+    let collections = []
+
+    for (let i = 0; i < 4; i++) {
+        collections.push(data[i])
+    }
+    console.log(collections);
+
+
     return (
         <div>
             <div className='h-[92vh] w-full  bg-[url("/src/assets/images/heroImage.png")] bg-top bg-cover flex items-center '>
@@ -19,14 +31,17 @@ const Home = ({api}) => {
                 </div>
 
             </div>
-            <div className=' h-200 w-full px-4 pt-20'>
+            <div className=' h-200 w-full px-4 pt-8'>
                 <div className='flex justify-between '>
                     <h1 className='text-xl font-serif'>Curated Collections</h1>
                     <a className='text-[16px] w-fit text-[#d4af37] flex' href="">VIEW ALL <ArrowRight size={24} strokeWidth={1} /></a>
                 </div>
                 <p className='text-[12px]'>Explore our finest categories selected for you.</p>
-                <div>
-<CollectionsSection api={api} />
+                <div className=' mt-10 w-full h-fit grid grid-cols-2 gap-4'>
+                    
+                    {collections.map((e, idx) => {
+                        return  <CollectionsSection data={e} />
+                    })}
                 </div>
             </div>
         </div>

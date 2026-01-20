@@ -1,0 +1,28 @@
+
+import React, { useEffect, useState } from "react";
+import { createContext } from 'react'
+import axios from "axios";
+export const ApiDataContext = createContext()
+
+const ContextApi = (props) => {
+
+  const [api, setApi] = useState(null)
+  useEffect(() => {
+    const ApiCall = async () => {
+      const response = await axios.get("https://dummyjson.com/products?limit=30")
+      setApi(response.data.products)
+    }
+    ApiCall()
+  }, [])
+
+
+  return (
+    <div>
+      <ApiDataContext.Provider value={api}>
+        {props.children}
+      </ApiDataContext.Provider>
+    </div>
+  )
+}
+
+export default ContextApi
