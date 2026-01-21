@@ -1,13 +1,9 @@
 import React from "react";
-import thumbnail from "../assets/images/productpg/thumbnail_placeholder.png";
-import otherimg from "../assets/images/productpg/otherimg.png";
+import thumbnail from "../../assets/images/productpg/thumbnail_placeholder.png";
+import otherimg from "../../assets/images/productpg/otherimg.png";
 import { Star, Truck, ShieldCheck, RotateCcw } from "lucide-react";
-import { AddToCartBTN, SaveLaterBTN } from "../Components/common/Buttons";
 
-import Tags from "./Product/Tags";
-import Highlights from "./product/Highlight";
-
-const BreadCrumb = () => {
+export const BreadCrumb = () => {
   return (
     <div className="w-full h-[41.6px] px-4 py-3 text-[10px]">
       HOME / AUDIO / PULSE ELITE
@@ -15,7 +11,7 @@ const BreadCrumb = () => {
   );
 };
 
-const Imgs = () => {
+export const Imgs = () => {
   return (
     <div className="w-full h-fit  mb-8">
       <img src={thumbnail} alt="" className="w-full mb-6" />
@@ -30,7 +26,7 @@ const Imgs = () => {
   );
 };
 
-const BasicInfo = () => {
+export const BasicInfo = () => {
   return (
     <div className="h-fit text&price flex flex-col pb-8 ">
       <span className="text-[8px]">AUDIOTECH PRO SERIES</span>
@@ -54,7 +50,7 @@ const BasicInfo = () => {
   );
 };
 
-const Desc = () => {
+export const Desc = () => {
   return (
     <div className="w-full h-fit text-sm font-light mb-6">
       Experience the next evolution of sound. The Pulse Elite features our
@@ -64,7 +60,7 @@ const Desc = () => {
   );
 };
 
-const Policy = () => {
+export const Policy = () => {
   return (
     <div className="text-[10px] text-green-600 font-mont flex items-center gap-5">
       <span className="flex gap-1 justify-center items-center">
@@ -81,24 +77,3 @@ const Policy = () => {
     </div>
   );
 };
-
-const Product = () => {
-  return (
-    <div className="bg-[#f9fafb]">
-      <BreadCrumb />
-
-      <main className="w-full h-866.25 0 px-4 ">
-        <Imgs />
-        <BasicInfo />
-        <AddToCartBTN />
-        <SaveLaterBTN />
-        <Highlights />
-        <Desc />
-        <Tags />
-        <Policy />
-      </main>
-    </div>
-  );
-};
-
-export default Product;
