@@ -4,9 +4,13 @@ import React, { useContext } from 'react'
 const CollectionsSection = ({data}) => {
 
     return (
-            <div  className=' h-60 w-42  bg-white shadow-[0px_0px_12px_-6px_#000000] overflow-hidden rounded-xl flex flex-col '>
-                <img className='h-4/5 w-full bg-cover border-b ' src={data.thumbnail} alt="" />
-                <h2 className='text-sm  px-2' >{data.title}</h2>
+            <div  className='relative h-54 w-42  bg-gray-300/40  overflow-hidden flex justify-center items-center '>
+                <img className=' object-contain ' src={data.thumbnail} alt="Img" />
+                <div className='absolute bg-amber-500/00 h-full w-full p-2 flex flex-col justify-between'>
+                    <div className='text-[11px] py-0.5 font-semibold text-[#ffffff] w-fit h-fit  uppercase backdrop-blur-xs bg-black/30    px-3'>{data.category}</div>
+                    <div className='text-[11px] py-0.5 px-2 font-semibold text-[#000000] w-fit h-fit  uppercase bg-white '>{data.brand}</div>
+                    
+                </div>
             </div>
     )
 }
