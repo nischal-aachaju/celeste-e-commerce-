@@ -29,7 +29,7 @@ const ReviewComp = () => {
 };
 
 const Review = () => {
-  return <ReviewComp />;
+  return <div className="w-full h-fit my-2"></div>;
 };
 
 export default Review;
