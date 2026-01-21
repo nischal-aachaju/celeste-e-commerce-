@@ -3,6 +3,7 @@ import { ArrowRight, Star } from 'lucide-react'
 import CollectionsSection from '../Components/common/CollectionsSection'
 import { ApiDataContext } from '../Context/ContextApi'
 import { useContext } from 'react'
+import HomeLastSection from '../Components/layout/HomeLastSection'
 
 const Home = () => {
     const data = useContext(ApiDataContext)
@@ -14,7 +15,7 @@ const Home = () => {
         newArrivel.push(data[i + 10])
 
     }
-    console.log(newArrivel);
+
 
     return (
         <div className='mt-14'>
@@ -53,7 +54,7 @@ const Home = () => {
                 </div>
                 <div className=' px-4 py-4 h-152 w-full grid grid-cols-2 '>
                     {newArrivel.map((elem, idx) => {
-                        return <div className='h-70 w-fit mx-1  shrink-0 overflow-hidden '>
+                        return <div key={idx} className='h-70 w-fit mx-1  shrink-0 overflow-hidden '>
                             <img className=' h-50 bg-gray-300/40 ' src={elem.thumbnail} alt="" />
                             <div className='h-20 w-full flex flex-col pt-2'>
                                 <h5 className='text-[14px] font-serif'>{elem.title}</h5>
@@ -78,6 +79,7 @@ const Home = () => {
                 </div>
 
             </div>
+            <HomeLastSection />
         </div>
     )
 }

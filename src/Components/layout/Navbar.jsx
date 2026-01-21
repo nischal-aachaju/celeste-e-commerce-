@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
         {menuBox ? null : (
-          <nav className=" absolute h-10 w-full top-14 backdrop-blur-sm left-0  overflow-hidden z-100 flex items-center gap-0 ">
+          <nav className=" absolute h-13 w-full top-14 backdrop-blur-sm left-0  overflow-hidden z-100 flex items-center gap-0 ">
             {nav.map((elem) => {
               return (
                 <a
