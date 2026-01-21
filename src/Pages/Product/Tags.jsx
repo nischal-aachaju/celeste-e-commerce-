@@ -6,12 +6,10 @@ const TagComp = ({ e }) => {
   );
 };
 
-const Tags = () => {
-  const list = ["Bluetooth 5", "Voice Assistant", "ANC"];
-
+const Tags = ({ tags }) => {
   return (
-    <div className="h-10 w-full flex gap-2 items-center mb-2">
-      {list.map((item, idx) => {
+    <div className="h-10 w-full flex gap-2 items-center mb-6">
+      {tags.map((item, idx) => {
         return <TagComp e={item} key={idx} />;
       })}
     </div>

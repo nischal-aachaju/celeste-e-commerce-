@@ -1,87 +1,50 @@
 import React from "react";
-import thumbnail from "../../assets/images/productpg/thumbnail_placeholder.png";
-import otherimg from "../../assets/images/productpg/otherimg.png";
 import { Star, Truck, ShieldCheck, RotateCcw } from "lucide-react";
+import Ratings from "../../Components/common/Ratings";
 
-export const BreadCrumb = () => {
+export const BreadCrumb = ({ title, category }) => {
+  const prodName = title.replace(/\s+/g, "-");
   return (
     <div className="w-full h-[41.6px] px-4 py-3 text-[10px]">
-      HOME / AUDIO / PULSE ELITE
+      HOME / PRODUCTS / {category.toUpperCase()} / {prodName.toUpperCase()}
     </div>
   );
 };
 
-export const BannerTag = () => {
-  return (
-    <div className="w-fit h-fit flex justify-center items-center font-md absolute bg-black top-2 left-2 text-white text-[8px] font-mont px-2 py-1">
-      NEW RELEASE
-    </div>
-  );
-};
-
-export const Imgs = () => {
-  return (
-    <div className="w-full h-fit  mb-8 relative">
-      <img src={thumbnail} alt="" className="w-full mb-6" />
-      <BannerTag />
-
-      <div className="w-full  flex gap-1 justify-center items-center">
-        <img className="w-[24%] h-21" src={otherimg} />
-        <img className="w-[24%] h-21" src={otherimg} />
-        <img className="w-[24%] h-21" src={otherimg} />
-        <img className="w-[24%] h-21" src={otherimg} />
-      </div>
-    </div>
-  );
-};
-
-export const BasicInfo = () => {
+export const BasicInfo = ({ title, price, rating, reviews, stock }) => {
   return (
     <div className="h-fit text&price flex flex-col pb-8 ">
-      <span className="text-[8px]">AUDIOTECH PRO SERIES</span>
-      <span className="text-3xl font-mont font-extrabold mb-2">
-        PULSE ELITE.
-      </span>
+      <span className="text-[10px]">{stock.toUpperCase()}</span>
+      <span className="text-3xl font-mont font-extrabold mb-2">{title}</span>
       <div className="text-2xl font-mont font-medium w-full h-13  flex items-center justify-between px-0.5  border-b-gray-400/20 border-b  ">
-        <span>$399</span>
+        <span>${price}</span>
         <div className="flex flex-col gap-1 items-end">
-          <span className="flex">
-            <Star size={10} fill="#ffd700" color="#ffd700" strokeWidth={0.5} />
-            <Star size={10} fill="#ffd700" color="#ffd700" strokeWidth={0.5} />
-            <Star size={10} fill="#ffd700" color="#ffd700" strokeWidth={0.5} />
-            <Star size={10} fill="#ffd700" color="#ffd700" strokeWidth={0.5} />
-            <Star size={10} fill="#ffd700" color="#ffd700" strokeWidth={0.5} />
-          </span>
-          <span className="text-[10px]">124 verified reviews</span>
+          <Ratings size="70px" value={rating} />
+          <span className="text-[10px]">{reviews.length} verified reviews</span>
         </div>
       </div>
     </div>
   );
 };
 
-export const Desc = () => {
-  return (
-    <div className="w-full h-fit text-sm font-light mb-6">
-      Experience the next evolution of sound. The Pulse Elite features our
-      proprietary acoustic engine for deeper bass and crisp highs. Designed for
-      the modern audiophile who refuses to compromise on style or substance.
-    </div>
-  );
+export const Desc = ({ desc }) => {
+  return <div className="w-full h-fit text-sm font-light mb-6">{desc}</div>;
 };
 
-export const Policy = () => {
+export const Policy = ({ warrInfo, shipInfo, returnInfo }) => {
   return (
-    <div className="text-[10px] text-green-600 font-mont flex items-center gap-5">
-      <span className="flex gap-1 justify-center items-center">
+    <div className="flex flex-col justify-center gap-2 w-full h-fit text-[10px] text-green-600 font-mont ">
+      <span className="flex gap-1  items-center">
         <Truck size={12} color="#16A34A" />
-        Free shipping
+        {shipInfo}
       </span>
-      <span className="flex gap-1 justify-center items-center">
-        <ShieldCheck color="#16A34A" size={12} />2 years warranty
+      <span className="flex gap-1  items-center">
+        <ShieldCheck color="#16A34A" size={12} />
+        {warrInfo}
       </span>
-      <span className="flex gap-1 justify-center items-center">
+      <span className="flex gap-1  items-center">
         <RotateCcw size={12} color="#16A34A" />
-        30 Day Return
+        {returnInfo}
       </span>
     </div>
   );

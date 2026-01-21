@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { createContext } from 'react'
 import axios from "axios";
+// eslint-disable-next-line react-refresh/only-export-components
 export const ApiDataContext = createContext()
 
 const ContextApi = (props) => {

@@ -1,5 +1,6 @@
 import Home from "./Pages/Home";
 import Navbar from "./Components/layout/Navbar";
+import Footer from "./Components/layout/Footer";
 import Product from "./Pages/Product/Product";
 import LoadingPage from "./Pages/LoadingPage";
 import { useContext } from "react";
@@ -15,6 +16,7 @@ const App = () => {
     <div className=" h-screen w-full">
       <Navbar />
       <Product />
+      <Footer />
     </div>
   );
 };
