@@ -1,15 +1,20 @@
 import React from "react";
-
+import { Facebook,Camera,AtSign } from "lucide-react";
 const Footer = () => {
   return (
     <div className="w-full h-90 flex flex-col px-4 mt-32 font-mont bg-gray-100 pt-4">
       <div className=" w-full h-76 grid grid-cols-2 gap-2 mb-2">
         <div className=" pr-2">
           <h1 className="text-xl font-semibold font-serif">LUXE</h1>
-          <p className="text-[10px] text-gray-600">
+          <p className="text-[10px] text-gray-600 mb-1">
             Refining the art of living with premium essentials curated for the
             discerning individual. Quality, elegance, and timeless design.
           </p>
+<div className=" w-full flex gap-1 ">
+            <Facebook  color="#4a5555" size={22} strokeWidth={1} />
+          <Camera size={22} color="#4a5555"  strokeWidth={1} />
+          <AtSign size={22} color="#4a5555"  strokeWidth={1}/>
+</div>
         </div>
         <div className="pt-2">
           <h4 className="text-[14px] pb-2 font-semibold tracking-widest">
