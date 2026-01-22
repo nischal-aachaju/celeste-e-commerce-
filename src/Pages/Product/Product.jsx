@@ -10,10 +10,10 @@ import { ApiDataContext } from "../../Context/ContextApi";
 
 
 
-const Product = ({idx}) => {
-  let id = {idx};
+const Product = () => {
+  let id = 20;
   const fullData = useContext(ApiDataContext);
-  const data = fullData[id];
+  const data = fullData[id-1];
 
   const {
     title,
