@@ -18,9 +18,9 @@ const Navbar = () => {
           <h1 className=" text-2xl font-bold font-serif text-black">LUXE</h1>
         </div>
        <div className="h-14  w-100 flex justify-between px-4 gap-6 ">
-         {nav.map((elem) => {
+         {nav.map((elem,idx) => {
           return (
-            <a
+            <a key={idx}
               className="  w-fit overflow-hiddenborder-y shrink-0  h-fit text-center pt-4   text-[14px] scale-y-95 tracking-wider uppercase
               relative
          after:content-['']
