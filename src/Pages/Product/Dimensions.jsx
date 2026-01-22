@@ -13,7 +13,7 @@ const DimensionComp = ({ e }) => {
 };
 
 const Dimesions = ({ width, height, depth }) => {
-  console.log(width, height, depth);
+  
   const comps = [
     { length: width, subScript: "cm", secText: "WIDTH" },
     { length: height, subScript: "cm", secText: "HEIGHT" },
