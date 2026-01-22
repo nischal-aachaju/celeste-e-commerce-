@@ -12,20 +12,20 @@ const useData=data[100]
 
 
     return (
-        <div className='px-4 h-screen w-full bg-white pt-20 flex flex-col'>
-            <div className=' h-1/2 w-full bg-gray-300/30 overflow-hidden shadow-[0px_5px_10px_2px_#0000002a] flex justify-center items-center '>
+        <div className='px-4 h-screen md:h-110 w-full bg-white pt-20 md:py-10 flex flex-col md:justify-center  md:flex-row '>
+            <div className=' h-1/2 md:h-full  w-full md:w-100 bg-gray-300/30 overflow-hidden shadow-[0px_5px_10px_2px_#0000002a] flex justify-center items-center '>
                 <img className=' h-fit w-fit ' src={useData.thumbnail} alt="" />
             </div>
-            <div className=' h-1/2 w-full pt-10 '>
+            <div className=' h-1/2 md:h-full   w-full md:w-1/2 pt-10 md:pl-10 '>
                 <div className=' pl-2 flex items-center  gap-3'>
                     <p className='h-fit w-fit px-4 py-0.5 rounded-full uppercase font-black tracking-wide scale-y-96 text-[14px] bg-blue-300/60  text-blue-600'>{useData.brand}</p>
                     <RatingStar size="70px" value={useData.rating} />
                     <p className='text-sm'>({useData.rating})</p>
                 </div>
-                <div className='p-2 flex flex-col gap-2'>
-                    <h3 className='text-4xl font-black font-serif'>{useData.title}</h3>
+                <div className='p-2 md:w-fit flex flex-col gap-2'>
+                    <h3 className='text-4xl  font-black font-serif'>{useData.title}</h3>
                     <p className='font-semibold text-xl'>${useData.price}</p>
-                    <p className='text-sm '>{useData.description}</p>
+                    <p className='text-sm md:w-1/2'>{useData.description}</p>
                 </div>
                 <div className='px-2 h-10  w-full flex items-center gap-2'>
                     {tags.map((elem,idx) => {
@@ -34,8 +34,8 @@ const useData=data[100]
 
                 </div>
                 <div className='p-2 flex gap-5'>
-                    <button className=' bg-[#ffbf00] h-12 w-1/2 rounded text-white font-semibold text-shadow-[0px_0px_1px_#00000088]'>Add to Cart</button>
-                    <button className=' bg-white border font-semibold h-12 w-1/2 rounded'>View Details</button>
+                    <button className=' bg-[#ffbf00] h-12 w-1/2 md:w-1/3 rounded text-white font-semibold text-shadow-[0px_0px_1px_#00000088]'>Add to Cart</button>
+                    <button className=' bg-white border md:w-1/3 font-semibold h-12 w-1/2 rounded'>View Details</button>
                 </div>
             </div>
 

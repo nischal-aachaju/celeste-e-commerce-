@@ -40,7 +40,7 @@ return <div key={idx}></div>
                 </div>
 
             </div>
-            <div className=' h-fit w-full px-4 pt-8 mb-12'>
+            <div className=' h-fit w-full px-4 md:px-16 pt-8 mb-12'>
                 <div className='flex justify-between '>
                     <h1 className='text-xl font-serif'>Curated Collections</h1>
                     <a className='text-[15px] w-fit font-semibold text-[#ff9500] flex' href="">VIEW ALL <ArrowRight size={20} strokeWidth={1.7} /></a>
@@ -55,15 +55,15 @@ return <div key={idx}></div>
                 </div>
 
             </div>
-            <div className=' h-210 w-full md:h-150 bg-gray-100 flex flex-col justify-between'>
-                <div className=' h-1  flex flex-col items-center py-8 gap-2'>
+            <div className=' h-210 w-full md:h-120 bg-gray-100 flex flex-col justify-between'>
+                <div className=' h-30  flex flex-col items-center py-8 gap-2'>
                     <p className='uppercase  text-sm text-shadow-[0px_0px_0.1px_#000] font-bold tracking-wide text-[#d4af37]'>Fresh Drop</p>
                     <h5 className=' text-2xl font-serif tracking-wider scale-y-120'>This Week's Arrivals</h5>
                 </div>
-                <div className=' px-4 py-0 h-160 w-full place-items-center md:grid-cols-4 grid grid-cols-2 '>
+                <div className=' px-4 py-0 h-160  md:h-100  w-full place-items-center md:grid-cols-4 grid grid-cols-2 '>
                     {newArrivel.map((elem, idx) => {
                         return <div key={idx} className='h-78 w-fit mx-1  shrink-0 overflow-hidden '>
-                            <img className=' h-50 bg-gray-300/40 ' src={elem.thumbnail} alt="" />
+                            <img className=' h-50 md:h-60 bg-gray-300/40 ' src={elem.thumbnail} alt="" />
                             <div className='h-20 w-full flex flex-col pt-2'>
                                 <h5 className='text-[14px] font-serif'>{elem.title}</h5>
                                 <div className=' flex '>
@@ -82,7 +82,7 @@ return <div key={idx}></div>
                     })}
 
                 </div>
-                <div className='h-16 w-full  flex justify-center items-center'>
+                <div className='h-16  w-full  flex justify-center items-center'>
                     <button className='  uppercase border-[1.5px] border-gray-400/60 text-[13px] font-semibold tracking-wide  text-gray-800 bg-white px-4 py-[0.4rem]'> View All Products</button>
                 </div>
 
