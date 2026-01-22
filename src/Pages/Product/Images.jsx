@@ -20,16 +20,16 @@ const Imgcomp = ({ link, onClick }) => {
 
 const Imgs = ({ images, thumbnail, bannerTag }) => {
   const [thumb, setthumb] = useState(thumbnail);
+  console.log(bannerTag);
 
   return (
-    <div className="w-full h-fit  mb-8 relative">
+    <div className="w-full h-fit flex flex-col mb-8 relative md:w-[60%]  max-w-124 mx-auto ">
       <img
         src={thumb}
         alt=""
         className="w-full shadow-[0_0_12px_rgba(0,0,0,0.15)] mb-6"
       />
-      <BannerTag text={bannerTag} />
-
+      {bannerTag && <BannerTag text={bannerTag} />}
       <div className="w-full  flex gap-1 justify-baseline items-center overflow-hidden shrink-0">
         {images.map((img, idx) => {
           return (
