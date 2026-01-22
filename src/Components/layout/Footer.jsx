@@ -43,11 +43,11 @@ const Footer = () => {
           <p className="text-[10px] text-gray-600">
             Subscribe to receive updates, access to exclusive deals, and more.
           </p>
-          <textarea
-            className="h-9 mt-1 w-full border border-gray-600/50 bg-white"
+          <input
+            className="h-9 my-1 w-full border border-gray-600/50 bg-white"
             name=""
             id=""
-          ></textarea>
+          ></input>
           <button className=" bg-black text-white h-8 w-full font-semibold text-[10px] tracking-widest">
             SUBSCRIBE
           </button>

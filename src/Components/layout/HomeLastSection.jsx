@@ -25,7 +25,7 @@ const useData=data[100]
                 <div className='p-2 md:w-fit flex flex-col gap-2'>
                     <h3 className='text-4xl  font-black font-serif'>{useData.title}</h3>
                     <p className='font-semibold text-xl'>${useData.price}</p>
-                    <p className='text-sm md:w-1/2'>{useData.description}</p>
+                    <p className='text-sm  md:w-2/3'>{useData.description}</p>
                 </div>
                 <div className='px-2 h-10  w-full flex items-center gap-2'>
                     {tags.map((elem,idx) => {
