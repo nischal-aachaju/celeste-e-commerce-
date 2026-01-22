@@ -39,7 +39,7 @@ const Product = () => {
       <BreadCrumb category={category} title={title} />
 
       <main className="w-full h-fit 0 px-6 md:flex-col md:px-12 lg:px-20 ">
-        <div className=" h-fit w-full md:flex justify-center md:gap-2">
+        <div className=" h-fit w-full md:flex justify-center  gap-8">
           <Imgs images={images} thumbnail={thumbnail} bannerTag={brand} />
           <div className="w-full h-fit md:w-[50%] max-w-124 mx-auto md:max-w-90.5 lg:max-w-117.5 ">
             <BasicInfo

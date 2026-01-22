@@ -11,7 +11,7 @@ export const BannerTag = ({ text }) => {
 const Imgcomp = ({ link, onClick }) => {
   return (
     <img
-      className="w-[24%] border-gray-400/30 border h-21"
+      className="w-[24%] border-gray-400/30 border aspect-square"
       src={link}
       onClick={onClick}
     />
