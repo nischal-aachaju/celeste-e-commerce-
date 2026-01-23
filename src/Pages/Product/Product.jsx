@@ -1,7 +1,6 @@
 import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
 import { BreadCrumb, BasicInfo, Desc, Policy } from "./Comps";
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
 
 import Tags from "./Tags";
 import Dimensions from "./Dimensions";
@@ -11,39 +10,11 @@ import LoadingPage from "../LoadingPage";
 import { useParams } from "react-router-dom";
 import { ApiDataContext } from "../../Context/ContextApi";
 const Product = () => {
-  const {id} = useParams();
+  const { id } = useParams();
 
-  // const [productData, setProductData] = useState(null);
+  const data = useContext(ApiDataContext); // gives the whole fetched array
 
-const data=  useContext(ApiDataContext)
-console.log(data);
-
-const productData=data[id]
-// const productData=data.filter((e)=>{return e.id==id})
-// console.log(data);
-
-// const productData = data.find(
-//   (e) => e.id === Number(id)
-// );
-
-  // useEffect(() => {
-  //   const getThatProduct = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `https://dummyjson.com/products/${id}`,
-  //       );
-  //       setProductData(response.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   getThatProduct();
-  // }, [id]);
-
-  // if (productData === null) {
-  //   return <LoadingPage />;
-  // }
+  const productData = data.find((el) => el.id == id); //Dumbass Find wrong use garexau ani ka chalxa ta (Provides the el if matches or else undefined)
 
   const {
     title,
@@ -58,12 +29,10 @@ const productData=data[id]
     shippingInformation: shipInfo,
     returnPolicy: returnInfo,
     availabilityStatus: stockInfo,
-    dimensions,
+    dimensions: { width, height, depth },
     images,
     thumbnail,
   } = productData;
-
-  const { width, height, depth } = dimensions;
 
   return (
     <div className="bg-[#f9fafb] mt-14">
