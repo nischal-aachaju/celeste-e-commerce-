@@ -9,10 +9,7 @@ const Home = () => {
   const collections = data.slice(2, 6);
   const newArrivel = data.slice(10, 14);
 
-  function Product(idx) {
-    console.log("helo", idx);
-    return <div key={idx}></div>;
-  }
+
 
   return (
     <div className="mt-14 mb-10">
@@ -55,15 +52,11 @@ const Home = () => {
 
         <div className=" mt-10 w-full h-fit grid grid-cols-2 md:grid-cols-4 gap-4  place-items-center">
           {collections.map((e, idx) => {
+            
+            
             return (
-              <div
-                key={idx}
-                onClick={() => {
-                  Product(idx);
-                }}
-              >
-                <CollectionsSection key={idx} data={e} />
-              </div>
+            
+                <Link key={e.id} to={`/products/${e.id}`} ><CollectionsSection key={idx} data={e} /></Link>
             );
           })}
         </div>
@@ -77,10 +70,12 @@ const Home = () => {
             This Week's Arrivals
           </h5>
         </div>
+        
         <div className=" px-4 py-0 h-160  md:h-100  w-full place-items-center md:grid-cols-4 grid grid-cols-2 ">
           {newArrivel.map((elem, idx) => {
             return (
-              <div key={idx} className="max-h-85  w-fit mx-1  shrink-0 ">
+            <Link key={elem.id} to={`/products/${elem.id}`} >
+               <div className="max-h-85  w-fit mx-1  shrink-0 ">
                 <img
                   className=" h-50  md:h-60 bg-white border  border-gray-300/80"
                   src={elem.thumbnail}
@@ -108,6 +103,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </Link>
             );
           })}
         </div>

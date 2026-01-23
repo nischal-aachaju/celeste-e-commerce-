@@ -8,9 +8,12 @@ import Dimensions from "./Dimensions";
 import Review from "./Review";
 import Imgs from "./Images";
 import LoadingPage from "../LoadingPage";
-
+import { useParams } from "react-router-dom";
 const Product = () => {
-  const id = 13;
+  const {id} = useParams();
+
+
+
   const [productData, setProductData] = useState(null);
 
   useEffect(() => {
