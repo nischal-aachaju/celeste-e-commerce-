@@ -1,11 +1,40 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className='h-80 w-full bg-black text-white flex justify-center items-center'>
-      <h1>404</h1>
-    </div>
-  )
-}
+    <section className="bg-white font-serif py-10">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="text-center">
+          {/* Background GIF area */}
+          <div
+            className="h-[400px] bg-center bg-no-repeat flex items-center justify-center"
+            style={{
+              backgroundImage:
+                "url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)",
+            }}
+          >
+            <h1 className="text-[80px] text-white text-shadow-[0px_0px_2px_#000000] font-bold">404</h1>
+          </div>
 
-export default NotFound
+          {/* Content box */}
+          <div className="-mt-[50px]">
+            <h3 className="text-2xl font-semibold">Look like you're lost</h3>
+            <p className="mt-2 text-gray-600">
+              the page you are looking for not avaible!
+            </p>
+
+            <Link
+              to="/"
+              className="inline-block mt-5 bg-[#39ac31] text-white px-5 py-2 rounded"
+            >
+              Go to Home
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NotFound;
