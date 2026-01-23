@@ -111,10 +111,10 @@ const Home = () => {
             );
           })}
         </div>
-        <div className="h-16  w-full  flex justify-center items-center">
+        <div className="h-16 md:mb-6 w-full  flex justify-center items-center">
           <button className="  uppercase border-[1.5px] border-gray-400/60 text-[13px] font-semibold tracking-wide  text-gray-800 bg-white px-4 py-[0.4rem]">
             {" "}
-            View All Products
+            <Link to="/all-products">View All Products</Link>
           </button>
         </div>
       </div>

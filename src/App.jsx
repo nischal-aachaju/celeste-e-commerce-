@@ -8,6 +8,7 @@ import { ApiDataContext } from "./Context/ContextApi";
 import NavbarDesktop from "./Components/layout/NavbarDesktop";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
+import Discovery from "./Pages/Discovery";
 const App = () => {
   const data = useContext(ApiDataContext);
 
@@ -26,7 +27,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>      
+        <Route path="/all-products" element={<Discovery />} />
+      </Routes>  
+          
       <Footer />
     </div>
   );
