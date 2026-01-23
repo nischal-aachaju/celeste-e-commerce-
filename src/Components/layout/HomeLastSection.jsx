@@ -10,7 +10,7 @@ const HomeLastSection = () => {
 
   const useData = data[randomIdx];
   const tags = useData.tags;
-//<Link key={e.id} to={/products/${e.id}} >View Details</Link>
+  //<Link key={e.id} to={/products/${e.id}} >View Details</Link>
   return (
     <div className="px-4 h-screen md:h-110 w-full bg-white pt-20 md:py-10 flex flex-col md:justify-center  md:flex-row ">
       <div className=" h-1/2 md:h-full  w-full md:w-100 bg-gray-300/30 overflow-hidden shadow-[0px_5px_10px_2px_#0000002a] flex justify-center items-center ">
@@ -48,9 +48,14 @@ const HomeLastSection = () => {
           <button className=" bg-[#ffbf00] h-12 w-1/2 md:w-1/3 rounded text-white font-semibold text-shadow-[0px_0px_1px_#00000088]">
             Add to Cart
           </button>
-          
-            <Link className=" bg-white border md:w-1/3 font-semibold h-12 w-1/2 rounded" key={useData.id} to={`/products/${useData.id}`} >View Details</Link>
-          
+
+          <Link
+            className=" bg-white border md:w-1/3 font-semibold h-12 w-1/2 rounded flex justify-center items-center"
+            key={useData.id}
+            to={`/products/${useData.id}`}
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>
