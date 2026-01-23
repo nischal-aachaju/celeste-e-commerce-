@@ -1,18 +1,36 @@
-import React, { useContext } from "react";
 import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
 import { BreadCrumb, BasicInfo, Desc, Policy } from "./Comps";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import Tags from "./Tags";
 import Dimensions from "./Dimensions";
 import Review from "./Review";
 import Imgs from "./Images";
-import { ApiDataContext } from "../../Context/ContextApi";
-
-const id = 100;
+import LoadingPage from "../LoadingPage";
 
 const Product = () => {
-  const fullData = useContext(ApiDataContext);
-  const data = fullData[id - 1];
+  const id = 100;
+
+  const [productData, setProductData] = useState(null);
+  useEffect(() => {
+    const getThatProduct = async () => {
+      try {
+        const response = await axios.get(
+          `https://dummyjson.com/products/${id}`,
+        );
+        setProductData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getThatProduct();
+  }, [id]);
+
+  if (productData === null) {
+    return <LoadingPage />;
+  }
 
   const {
     title,
@@ -30,7 +48,7 @@ const Product = () => {
     dimensions,
     images,
     thumbnail,
-  } = data;
+  } = productData;
 
   const { width, height, depth } = dimensions;
 
