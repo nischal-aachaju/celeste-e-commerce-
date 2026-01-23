@@ -3,7 +3,7 @@ import CollectionsSection from "../Components/common/CollectionsSection";
 import { ApiDataContext } from "../Context/ContextApi";
 import { useContext } from "react";
 import HomeLastSection from "../Components/layout/HomeLastSection";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   const data = useContext(ApiDataContext);
   let collections = [];
@@ -60,6 +60,7 @@ const Home = () => {
         <div className=" mt-10 w-full h-fit grid grid-cols-2 md:grid-cols-4 gap-4  place-items-center">
           {collections.map((e, idx) => {
             return (
+              
               <div
                 key={idx}
                 onClick={() => {

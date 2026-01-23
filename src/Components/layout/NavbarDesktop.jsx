@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import {
   Search,
-  UserRound,
-  ShoppingBag,
-  Moon,
-  TextAlignJustify,
-  X,
-} from "lucide-react";
+  UserRound,ShoppingBag, Moon, TextAlignJustify,X,} from "lucide-react";
+
+
 const Navbar = () => {
   const [menuBox, setMenuBox] = useState(true);
   const nav = ["New Arrivals", "Collections", "Accessories", "Editorial"];
@@ -29,11 +26,7 @@ const Navbar = () => {
          after:origin-left after:scale-x-0
          after:bg-black
          after:transition-transform after:duration-200
-         hover:after:scale-x-100
-              
-              "
-              href=""
-            >
+         hover:after:scale-x-100" href="">
               {elem}
             </a>
           );

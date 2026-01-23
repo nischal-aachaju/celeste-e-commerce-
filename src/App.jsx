@@ -6,7 +6,8 @@ import LoadingPage from "./Pages/LoadingPage";
 import { useContext } from "react";
 import { ApiDataContext } from "./Context/ContextApi";
 import NavbarDesktop from "./Components/layout/NavbarDesktop";
-
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./Pages/NotFound";
 const App = () => {
   const data = useContext(ApiDataContext);
 
@@ -21,8 +22,11 @@ const App = () => {
       <div className=" hidden md:block">
         <NavbarDesktop />
       </div>
-      <Home />
-      <Product />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Product />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>      
       <Footer />
     </div>
   );
