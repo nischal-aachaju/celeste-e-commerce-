@@ -8,6 +8,8 @@ import HomeLastSection from '../Components/layout/HomeLastSection'
 
 const  Home = () => {
     const data = useContext(ApiDataContext)
+    console.log(data);
+    
     let collections = []
     let newArrivel = []
 
