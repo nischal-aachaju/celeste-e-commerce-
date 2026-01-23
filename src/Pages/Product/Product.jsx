@@ -1,6 +1,6 @@
 import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
 import { BreadCrumb, BasicInfo, Desc, Policy } from "./Comps";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 import Tags from "./Tags";
@@ -9,31 +9,41 @@ import Review from "./Review";
 import Imgs from "./Images";
 import LoadingPage from "../LoadingPage";
 import { useParams } from "react-router-dom";
+import { ApiDataContext } from "../../Context/ContextApi";
 const Product = () => {
   const {id} = useParams();
 
+  // const [productData, setProductData] = useState(null);
 
+const data=  useContext(ApiDataContext)
+console.log(data);
 
-  const [productData, setProductData] = useState(null);
+const productData=data[id]
+// const productData=data.filter((e)=>{return e.id==id})
+// console.log(data);
 
-  useEffect(() => {
-    const getThatProduct = async () => {
-      try {
-        const response = await axios.get(
-          `https://dummyjson.com/products/${id}`,
-        );
-        setProductData(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+// const productData = data.find(
+//   (e) => e.id === Number(id)
+// );
 
-    getThatProduct();
-  }, [id]);
+  // useEffect(() => {
+  //   const getThatProduct = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `https://dummyjson.com/products/${id}`,
+  //       );
+  //       setProductData(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
-  if (productData === null) {
-    return <LoadingPage />;
-  }
+  //   getThatProduct();
+  // }, [id]);
+
+  // if (productData === null) {
+  //   return <LoadingPage />;
+  // }
 
   const {
     title,

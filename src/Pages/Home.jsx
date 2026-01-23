@@ -9,8 +9,6 @@ const Home = () => {
   const collections = data.slice(2, 6);
   const newArrivel = data.slice(10, 14);
 
-
-
   return (
     <div className="mt-14 mb-10">
       <div className='h-[92vh] md:h-[96vh] w-full  bg-[url("/src/assets/images/heroImage.png")] bg-top bg-cover md:bg-top flex items-center '>
