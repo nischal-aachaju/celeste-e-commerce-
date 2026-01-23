@@ -9,7 +9,7 @@ const ContextApi = (props) => {
   useEffect(() => {
     const ApiCall = async () => {
       const response = await axios.get(
-        `https://dummyjson.com/products?limit=30`,
+        `https://dummyjson.com/products?limit=25`,
       );
       setApi(response.data.products);
     };
