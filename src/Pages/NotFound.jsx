@@ -8,7 +8,7 @@ const NotFound = () => {
         <div className="text-center">
           {/* Background GIF area */}
           <div
-            className="h-[400px] bg-center bg-no-repeat flex items-center justify-center"
+            className="h-100 bg-center bg-no-repeat flex items-center justify-center"
             style={{
               backgroundImage:
                 "url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)",
@@ -18,7 +18,7 @@ const NotFound = () => {
           </div>
 
           {/* Content box */}
-          <div className="-mt-[50px]">
+          <div className="-mt-12.5">
             <h3 className="text-2xl font-semibold">Look like you're lost</h3>
             <p className="mt-2 text-gray-600">
               the page you are looking for not avaible!
