@@ -10,8 +10,8 @@ const Home = () => {
   let newArrivel = [];
 
   for (let i = 0; i < 4; i++) {
-    collections.push(data[i + 80]);
-    newArrivel.push(data[i + 90]);
+    collections.push(data[i + 5]);
+    newArrivel.push(data[i + 10]);
   }
   function Product(idx) {
     console.log("helo", idx);

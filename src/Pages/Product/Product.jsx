@@ -10,7 +10,7 @@ import Imgs from "./Images";
 import LoadingPage from "../LoadingPage";
 
 const Product = () => {
-  const id = 100;
+  const id = 13;
 
   const [productData, setProductData] = useState(null);
   useEffect(() => {

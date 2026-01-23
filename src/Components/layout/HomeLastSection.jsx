@@ -6,7 +6,7 @@ const HomeLastSection = () => {
 
     const data = useContext(ApiDataContext)
   
-const useData=data[100]
+const useData=data[11]
     const tags =useData.tags
 
 
@@ -18,7 +18,7 @@ const useData=data[100]
             </div>
             <div className=' h-1/2 md:h-full   w-full md:w-1/2 pt-10 md:pl-10 '>
                 <div className=' pl-2 flex items-center  gap-3'>
-                    <p className='h-fit w-fit px-4 py-0.5 rounded-full uppercase font-black tracking-wide scale-y-96 text-[14px] bg-blue-300/60  text-blue-600'>{useData.brand}</p>
+                    <p className='h-fit w-fit px-4 py-0.5 rounded-full uppercase font-semibold tracking-wide scale-y-96 text-[14px] bg-blue-300/60  text-blue-600'>{useData.brand}</p>
                     <RatingStar size="70px" value={useData.rating} />
                     <p className='text-sm'>({useData.rating})</p>
                 </div>
