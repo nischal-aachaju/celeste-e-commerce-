@@ -3,22 +3,30 @@ import CartProduct from "../Components/layout/CartProduct";
 
 const Cart = () => {
     const cartData=JSON.parse(localStorage.getItem("cart"))
-    // console.log(cartData);
+   let length_cart=0
+    if (cartData==null){
+        length_cart=0
+    }
+    else{
+        length_cart=cartData.length
+    }
     
+   
+   
   return (
-    <div className="bg-gray-200 h-screen w-full flex flex-col mt-12 pt-2">
-      <div className=" pl-4 w-full h-30 pb-10 flex " >
-        <div className="h-full w-2/3 flex flex-col justify-end ">
-          <h4 className="text-2xl font-serif font-semibold">Shopping Cart</h4>
+    <div className="flex flex-col w-full h-screen pt-2 mt-12 bg-gray-200">
+      <div className="flex w-full pb-10 pl-4 h-30" >
+        <div className="flex flex-col justify-end w-2/3 h-full ">
+          <h4 className="font-serif text-2xl font-semibold">Shopping Cart</h4>
           <p>
-            you have <span className="text-blue-500 font-semibold">3 items</span> in your bag
+            you have <span className="font-semibold text-blue-500">{length_cart} items</span> in your bag
           </p>
         </div> 
         <div className="h-full w-1/3  text-[12px] flex items-end">
             CONTINUE SHOPPING
         </div>
       </div>
-      <div className="w-full h-full px-4 flex flex-col gap-3">
+      <div className="flex flex-col w-full h-full gap-3 px-4">
 
 {cartData?.length > 0 ? (
   cartData.map((e, idx) => (
