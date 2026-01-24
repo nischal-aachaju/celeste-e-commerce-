@@ -8,6 +8,7 @@ const Navbar = () => {
   const [menuBox, setMenuBox] = useState(true);
   const nav = ["New Arrivals", "Collections", "Accessories", "Editorial"];
 
+  localStorage.getItem("product")
   return (
     <div className=" fixed top-0 h-14 bg-white  w-full z-100">
       <div className=" h-14   flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]">
