@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Key, MoveRight } from "lucide-react";
 import { Heart } from "lucide-react";
 import { useParams } from "react-router-dom";
 export const AddToCartBTN = () => {
   // localStorage.clear()
+ 
+  useEffect(() => {
+    first
+  
+    return () => {
+      second
+    }
+  }, [third])
+  
 
   const { id } = useParams();
 
   const AddToCart = () => {
-    // 1. Get existing cart (or empty object)
-    const existingCart = JSON.parse(localStorage.getItem("cart")) || {};
-
-    // 2. Add / update product
-    existingCart[`product${id}`] = id;
-
-    // 3. Save back
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+    existingCart.push(id)
     localStorage.setItem("cart", JSON.stringify(existingCart));
+    
   };
+
 
   return (
     <button
@@ -35,7 +41,7 @@ export const AddToCartBTN = () => {
 
 export const SaveLaterBTN = () => {
   return (
-    <div className="flex w-full gap-2 justify-center items-center mb-6">
+    <div className="flex items-center justify-center w-full gap-2 mb-6">
       <button className="w-[82%] h-16 bg-[#ffffff] flex items-center justify-center px-5 font-mont border-gray-400/30 border text-[12px] font-semibold mb-4">
         SAVE FOR LATER
       </button>

@@ -2,6 +2,9 @@ import React from "react";
 import CartProduct from "../Components/layout/CartProduct";
 
 const Cart = () => {
+    const cartData=JSON.parse(localStorage.getItem("cart"))
+    // console.log(cartData);
+    
   return (
     <div className="bg-gray-200 h-screen w-full flex flex-col mt-12 pt-2">
       <div className=" pl-4 w-full h-30 pb-10 flex " >
@@ -17,9 +20,14 @@ const Cart = () => {
       </div>
       <div className="w-full h-full px-4 flex flex-col gap-3">
 
-        <CartProduct/>
-        <CartProduct/>
-        <CartProduct/>
+{cartData?.length > 0 ? (
+  cartData.map((e, idx) => (
+    <CartProduct key={idx} id={Number(e)} />
+  ))
+) : (
+  <p>Your cart is empty</p>
+)}
+
       </div>
     </div>
   );
