@@ -5,7 +5,7 @@ import Ratings from "../../Components/common/Ratings";
 export const BreadCrumb = ({ title, category }) => {
   const prodName = title.replace(/\s+/g, "-");
   return (
-    <div className="w-full h-[41.6px] px-6 md:px-12 lg:px-20 py-3 text-[12px] font-mont font-md">
+    <div className="w-full h-[41.6px] px-6 md:px-12 lg:px-20 py-3 text-[8px] font-mont font-md sm:text-[10px]">
       HOME / PRODUCTS / {category.toUpperCase()} / {prodName.toUpperCase()}
     </div>
   );
