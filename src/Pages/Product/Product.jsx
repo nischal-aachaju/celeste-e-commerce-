@@ -1,4 +1,4 @@
-import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
+import { SaveLaterBTN } from "../../Components/common/Buttons";
 import { BreadCrumb, BasicInfo, Desc, Policy } from "./Comps";
 import { useContext, useEffect } from "react";
 
@@ -9,6 +9,7 @@ import Imgs from "./Images";
 import LoadingPage from "../LoadingPage";
 import { useParams } from "react-router-dom";
 import { ApiDataContext } from "../../Context/ContextApi";
+import AddToCartBtn from "../../Components/common/AddToCart";
 const Product = () => {
   const { id } = useParams();
 
@@ -39,8 +40,8 @@ const Product = () => {
     <div className="bg-[#f9fafb] mt-14">
       <BreadCrumb category={category} title={title} />
 
-      <main className="w-full h-fit 0 px-6 md:flex-col md:px-12 lg:px-20 ">
-        <div className=" h-fit w-full md:flex justify-center  gap-8">
+      <main className="w-full px-6 h-fit 0 md:flex-col md:px-12 lg:px-20 ">
+        <div className="justify-center w-full gap-8 h-fit md:flex">
           <Imgs images={images} thumbnail={thumbnail} bannerTag={brand} />
           <div className="w-full h-fit md:w-[50%] max-w-124 mx-auto md:max-w-90.5 lg:max-w-117.5 ">
             <BasicInfo
@@ -50,7 +51,7 @@ const Product = () => {
               reviews={reviews}
               stock={stockInfo}
             />
-            <AddToCartBTN />
+            <AddToCartBtn />
             <SaveLaterBTN />
             <Dimensions width={width} height={height} depth={depth} />
             <Desc desc={desc} />

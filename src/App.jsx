@@ -9,6 +9,7 @@ import NavbarDesktop from "./Components/layout/NavbarDesktop";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
 import Discovery from "./Pages/Discovery";
+import Cart from "./Pages/Cart";
 const App = () => {
   const data = useContext(ApiDataContext);
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/products/:id" element={<Product />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/all-products" element={<Discovery />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>  
           
       <Footer />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Search,
   UserRound,ShoppingBag, Moon, TextAlignJustify,X,} from "lucide-react";
@@ -8,13 +9,14 @@ const Navbar = () => {
   const [menuBox, setMenuBox] = useState(true);
   const nav = ["New Arrivals", "Collections", "Accessories", "Editorial"];
 
+  localStorage.getItem("product")
   return (
-    <div className=" fixed top-0 h-14 bg-white  w-full z-100">
+    <div className="fixed top-0 w-full bg-white h-14 z-100">
       <div className=" h-14   flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]">
-        <div className=" flex justify-center items-center w-fit ">
-          <h1 className=" text-2xl font-bold font-serif text-black">LUXE</h1>
-        </div>
-       <div className="h-14  w-100 flex justify-between px-4 gap-6 ">
+        <Link to="/"><div className="flex items-center justify-center w-fit">
+          <h1 className="font-serif text-2xl font-bold text-black ">LUXE</h1>
+        </div></Link>
+       <div className="flex justify-between gap-6 px-4 h-14 w-100 ">
          {nav.map((elem,idx) => {
           return (
             <a key={idx}
@@ -32,10 +34,10 @@ const Navbar = () => {
           );
         })}
        </div>
-        <div className=" flex w-fit gap-8 items-center justify-between mr-10">
+        <div className="flex items-center justify-between gap-8 mr-10 w-fit">
           
             <Search className="cursor-pointer" strokeWidth={1} />
-            <ShoppingBag className="cursor-pointer" strokeWidth={1} />
+            <Link to="/cart"><ShoppingBag className="cursor-pointer" strokeWidth={1} /></Link>
           
         </div>
       </div>
