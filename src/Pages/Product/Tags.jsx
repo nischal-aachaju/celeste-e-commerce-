@@ -8,7 +8,7 @@ const TagComp = ({ e }) => {
 
 const Tags = ({ tags }) => {
   return (
-    <div className="h-10 w-full flex gap-2 items-center mb-6">
+    <div className="flex items-center w-full h-10 gap-2 mb-6">
       {tags.map((item, idx) => {
         return <TagComp e={item} key={idx} />;
       })}

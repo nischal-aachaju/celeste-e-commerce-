@@ -5,8 +5,8 @@ import Ratings from "../../Components/common/Ratings";
 const ReviewComp = ({ rating }) => {
   return (
     <div className=" w-full h-fit  flex flex-col justify-center items-start shadow-[0_2px_8px_rgba(0,0,0,0.06)] border-gray-400/30  border mb-2 gap-1.5 pt-2 pb-4 px-5 shrink-0 md:w-[48%] ">
-      <div className="flex  w-full font-mont justify-between">
-        <div className="flex justify-center items-center gap-2 ">
+      <div className="flex justify-between w-full font-mont">
+        <div className="flex items-center justify-center gap-2 ">
           <CircleUserRound size={16} color="#525252" />
           <div className="flex flex-col">
             <span className="text-[10px] font-semibold text-green-700">
@@ -38,11 +38,11 @@ const Review = ({ reviews, rating }) => {
   const canToggle = reviews.length > defaultCount;
 
   return (
-    <div className="w-full h-fit mt-16 mb-0 flex flex-col mx-auto max-w-124 md:max-w-none lg:max-w-none">
-      <div className="w-full flex flex-col h-fit  mb-8 ">
-        <div className=" text-3xl font-mont font-semibold">REVIEWS</div>
+    <div className="flex flex-col w-full mx-auto mt-16 mb-0 h-fit max-w-124 md:max-w-none lg:max-w-none">
+      <div className="flex flex-col w-full mb-8 h-fit ">
+        <div className="text-3xl font-semibold font-mont">REVIEWS</div>
         <div className="flex gap-4">
-          <span className=" text-4xl font-mont font-bold flex justify-center items-center text-yellow-500">
+          <span className="flex items-center justify-center text-4xl font-bold text-yellow-500 font-mont">
             {rating}
           </span>
           <div className="">
@@ -54,7 +54,7 @@ const Review = ({ reviews, rating }) => {
         </div>
       </div>
 
-      <div className="w-full h-fit flex flex-col gap-2 md:flex-row justify-evenly flex-wrap">
+      <div className="flex flex-col flex-wrap w-full gap-2 h-fit md:flex-row justify-evenly">
         {visibleReviews.map((review, idx) => {
           return <ReviewComp rating={review} key={idx} />;
         })}

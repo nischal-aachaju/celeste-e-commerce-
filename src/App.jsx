@@ -17,11 +17,11 @@ const App = () => {
     return <LoadingPage />;
   }
   return (
-    <div className=" h-screen w-full">
-      <div className=" block md:hidden">
+    <div className="w-full h-screen ">
+      <div className="block md:hidden">
         <Navbar />
       </div>
-      <div className=" hidden md:block">
+      <div className="hidden md:block">
         <NavbarDesktop />
       </div>
       <Routes>

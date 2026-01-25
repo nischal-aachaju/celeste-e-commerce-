@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <section className="bg-white font-serif py-10">
-      <div className="max-w-5xl mx-auto px-4">
+    <section className="py-10 font-serif bg-white">
+      <div className="max-w-5xl px-4 mx-auto">
         <div className="text-center">
           {/* Background GIF area */}
           <div
-            className="h-100 bg-center bg-no-repeat flex items-center justify-center"
+            className="flex items-center justify-center bg-center bg-no-repeat h-100"
             style={{
               backgroundImage:
                 "url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)",

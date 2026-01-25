@@ -4,16 +4,16 @@ const DiscoveryComponent = ({elem}) => {
 
     
   return (
-    <div className="h-50 w-40  md:w-auto md:aspect-square  mt-20 shrink-0 ">
+    <div className="w-40 mt-20 h-50 md:w-auto md:aspect-square shrink-0 ">
       <img
-        className=" h-50  md:h-60 bg-white border  border-gray-300/80"
+        className="bg-white border h-50 md:h-60 border-gray-300/80"
         src={elem.thumbnail}
         alt=""
       />
-      <div className="h-20 w-full flex flex-col pt-2">
+      <div className="flex flex-col w-full h-20 pt-2">
         <h5 className="text-[14px] font-serif">{elem.title}</h5>
-        <div className=" flex ">
-          <div className="  w-1/2">
+        <div className="flex ">
+          <div className="w-1/2 ">
             <p className="text-[12px] uppercase">{elem.category}</p>
             <div>
               <p className="text-[13px] font-bold">${elem.price}</p>
