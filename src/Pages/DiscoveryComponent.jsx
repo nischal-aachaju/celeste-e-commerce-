@@ -14,9 +14,9 @@ const DiscoveryComponent = ({elem}) => {
         <h5 className="text-[14px] font-serif">{elem.title}</h5>
         <div className="flex ">
           <div className="w-1/2 ">
-            <p className="text-[12px] uppercase">{elem.category}</p>
+            <p className=" text-[12px] uppercase">{elem.category}</p>
             <div>
-              <p className="text-[13px] font-bold">${elem.price}</p>
+              <p className="text-[13px]  font-bold">${elem.price}</p>
             </div>
           </div>
 
