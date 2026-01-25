@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@tailwind utilities; 
+
 @theme {
   --font-mont: "Montserrat", sans-serif;
+
 }
+
+.underline-effect {
+  @apply w-fit overflow-hidden border-b-0 shrink-0  h-fit text-center  text-[10px] scale-y-95 tracking-wider
+              relative
+         after:content-['']
+         after:absolute after:left-0 after:bottom-0
+         after:h-[1px] after:w-full
+         after:origin-left after:scale-x-0
+         after:bg-black
+         after:transition-transform after:duration-200
+         hover:after:scale-x-100;
+}
+

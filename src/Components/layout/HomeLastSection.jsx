@@ -45,12 +45,12 @@ const HomeLastSection = () => {
           })}
         </div>
         <div className="flex gap-5 p-2">
-          <button className=" bg-[#ffbf00] h-12 w-1/2 md:w-1/3 rounded text-white font-semibold text-shadow-[0px_0px_1px_#00000088]">
+          <button className="cursor-pointer hover:bg-[#f5b800] bg-[#ffbf00] h-12 w-1/2 md:w-1/3 rounded text-white font-semibold text-shadow-[0px_0px_1px_#00000088]">
             Add to Cart
           </button>
 
           <Link
-            className="flex items-center justify-center w-1/2 h-12 font-semibold bg-white border rounded md:w-1/3"
+            className="flex items-center justify-center w-1/2 h-12 font-semibold bg-white border rounded hover:bg-gray-100 md:w-1/3"
             key={useData.id}
             to={`/products/${useData.id}`}
           >

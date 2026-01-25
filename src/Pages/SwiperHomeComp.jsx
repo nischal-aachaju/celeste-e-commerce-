@@ -20,10 +20,10 @@ const SwiperHomeComp = ({ data }) => {
           {data.description}
         </p>
         <div className="flex gap-2 ">
-          <button className="h-10 px-4 text-sm font-semibold text-black bg-white shrink-0 w-fit [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
+          <button className="cursor-pointer hover:bg-gray-100 h-10 px-4 text-sm font-semibold text-black bg-white shrink-0 w-fit [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
             {data.ctaPrimary}
           </button>
-          <button className="h-10 px-4 text-sm font-semibold text-white border border-white shrink-0 w-fit [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
+          <button className="cursor-pointer h-10 px-4 text-sm font-semibold text-white border hover:bg-white/20 border-white shrink-0 w-fit [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
             {data.ctaSecondary}
           </button>
         </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="fixed top-0 w-full bg-white h-14 z-100">
       <div className=" h-14   flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]">
         <Link to="/"><div className="flex items-center justify-center w-fit">
-          <h1 className="font-serif text-2xl font-bold text-black ">LUXE</h1>
+          <h1 className="pt-3 font-serif text-2xl font-bold text-black ">LUXE</h1>
         </div></Link>
        <div className="flex justify-between gap-6 px-4 h-14 w-100 ">
          {nav.map((elem,idx) => {
