@@ -30,7 +30,7 @@ const DiscoveryComponent = ({ elem }) => {
 
         {elem.discountPercentage > 10 && (
           <div className="absolute bottom-3 left-3">
-            <span className="text-[10px] font-bold text-white uppercase tracking-wide bg-gradient-to-r from-rose-500 to-pink-500 px-2.5 py-1 rounded-full shadow-sm">
+            <span className="text-[10px] font-bold text-white uppercase tracking-wide bg-linear-to-r from-rose-500 to-pink-500 px-2.5 py-1 rounded-full shadow-sm">
               -{Math.round(elem.discountPercentage)}%
             </span>
           </div>
@@ -50,7 +50,7 @@ const DiscoveryComponent = ({ elem }) => {
           </div>
         </div>
 
-        <h5 className="text-sm md:text-[15px] font-serif font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-amber-700 transition-colors duration-300 min-h-[2.5rem]">
+        <h5 className="text-sm md:text-[15px] font-serif font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-amber-700 transition-colors duration-300 min-h-10">
           {elem.title}
         </h5>
 
@@ -65,7 +65,7 @@ const DiscoveryComponent = ({ elem }) => {
           )}
         </div>
 
-        <button className="w-full mt-2 py-2.5 text-center text-xs font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 hover:from-gray-900 hover:to-black">
+        <button className="w-full mt-2 py-2.5 text-center text-xs font-semibold text-white uppercase tracking-wider bg-linear-to-r from-gray-800 to-gray-900 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 hover:from-gray-900 hover:to-black">
           Add to Cart
         </button>
       </div>
