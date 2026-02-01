@@ -1,16 +1,16 @@
 
 const CollectionsSection = ({ data }) => {
   return (
-    <div className="group relative flex items-center justify-center overflow-hidden h-60 w-44 md:h-72 md:w-48 lg:w-60 lg:h-80 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer">
+    <div className="group relative flex items-center justify-center overflow-hidden h-60 w-44 md:h-72 md:w-48 lg:w-60 lg:h-80 rounded-xl bg-linear-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer">
       <img
         className="object-contain w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
         src={data.thumbnail}
         alt={data.title || "Collection"}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+      <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
 
       <div className="absolute flex flex-col justify-between w-full h-full p-3 md:p-4">
         <div className="flex justify-start">

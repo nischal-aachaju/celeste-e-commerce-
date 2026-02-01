@@ -5,14 +5,14 @@ import { Heart } from "lucide-react";
 
 export const SaveLaterBTN = () => {
   return (
-    <div className="flex items-center justify-center w-full gap-2 mb-6">
-      <button className="w-[82%] h-16 bg-[#ffffff] flex items-center justify-center px-5 font-mont border-gray-400/30 border text-[12px] font-semibold mb-4">
+    <div className="flex  justify-center w-full gap-2 mb-6">
+      <button className="w-[82%] h-16 bg-[#ffffff] cursor-pointer flex items-center justify-center px-5 font-mont border-gray-400/30 border text-[12px] font-semibold mb-4">
         SAVE FOR LATER
       </button>
 
       {/* ICON BUTTON */}
       <button
-        className="
+        className=" 
         w-[18%] h-16 bg-white border border-gray-400/30
         flex items-center justify-center
 

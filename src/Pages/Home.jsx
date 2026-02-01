@@ -110,7 +110,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-col justify-between w-full bg-gradient-to-b from-gray-200 to-gray-50 bg py-8">
+      <div className="flex flex-col justify-between w-full bg-linear-to-b from-gray-200 to-gray-50 bg py-8">
         <div className="flex flex-col items-center gap-2 py-8 h-30">
           <p className="uppercase  text-sm text-shadow-[0px_0px_0.1px_#000] font-bold tracking-wide text-[#d4af37]">
             Fresh Drop
@@ -125,7 +125,7 @@ const Home = () => {
             return (
               <Link key={idx} to={`/products/${elem.id}`} className="w-full">
                 <div className="group h-80 relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
-                  <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                  <div className="relative overflow-hidden bg-linear-to-br from-gray-50 to-gray-100">
                     <img
                       className="w-full h-48 md:h-56 lg:h-64 object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105"
                       src={elem.thumbnail}
@@ -140,7 +140,7 @@ const Home = () => {
                     </div>
 
                     <div className="absolute top-3 left-3">
-                      <span className="text-[10px] font-bold text-white uppercase tracking-wide bg-gradient-to-r from-amber-500 to-orange-500 px-2.5 py-1 rounded-full shadow-sm">
+                      <span className="text-[10px] font-bold text-white uppercase tracking-wide bg-linear-to-r from-amber-500 to-orange-500 px-2.5 py-1 rounded-full shadow-sm">
                         New
                       </span>
                     </div>
@@ -176,7 +176,7 @@ const Home = () => {
                     </div>
 
                     <div className="pt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <div className="w-full py-2 text-center text-xs font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg hover:from-gray-900 hover:to-black transition-all duration-300">
+                      <div className="w-full py-2 text-center text-xs font-semibold text-white uppercase tracking-wider bg-linear-to-r from-gray-800 to-gray-900 rounded-lg hover:from-gray-900 hover:to-black transition-all duration-300">
                         Add to Cart
                       </div>
                     </div>

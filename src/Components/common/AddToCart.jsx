@@ -1,7 +1,24 @@
 import { Key, MoveRight } from "lucide-react";
+import { useState } from "react";
 
 import { useParams } from "react-router-dom";
 const AddToCartBtn = () => {
+
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleAddToCart = () => {
+    setShowNotification(true);
+
+    // auto-hide after 2 seconds
+    setTimeout(() => {
+      setShowNotification(false);
+    }, 3000);
+  };
+
+
+
+
+
   //   localStorage.clear()
   const { id } = useParams();
   const AddToCart = () => {
@@ -17,18 +34,36 @@ const AddToCartBtn = () => {
   };
 
   return (
+    <>
     <button
       onClick={() => {
+        handleAddToCart
         AddToCart();
+        
       }}
-      className="w-full h-16 bg-[#000000] text-white flex items-center justify-between px-5 font-mont text-sm font-medium mb-4"
+      className="w-full h-16 cursor-pointer bg-[#000000] text-white flex items-center justify-between px-5 font-mont text-sm font-medium mb-4"
     >
       <span>ADD TO CART</span>
       <span>
         <MoveRight />
       </span>
     </button>
+    
+     {showNotification && <AddToCartNotification />}
+    </> 
   );
 };
 
 export default AddToCartBtn;
+
+
+export const AddToCartNotification= ()=>{
+
+  return (
+
+    <div className="h-200 bg-amber-200 w-full fixed top-200 left-0 z-50 flex items-center justify-center">
+      Added to cart ✅
+    </div>
+  )
+};
+
