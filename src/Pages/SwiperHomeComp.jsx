@@ -7,7 +7,7 @@ const SwiperHomeComp = ({ data }) => {
       style={{ backgroundImage: `url(${data.bgImg})` }}
     >
       <div className="flex flex-col w-2/3 gap-4 pl-4 text-white h-1/3 md:h-full md:w-full md:pl-14 md:gap-10 md:justify-center">
-        <div className="text-[12px] text-[#ffffff] w-fit  uppercase backdrop-blur-xs bg-black/10  border border-[#6e581b] rounded-2xl  px-2">
+        <div className="text-[12px] text-[#fd5400] w-fit  uppercase backdrop-blur-xs bg-black/10  border border-[#6e581b] rounded-2xl  px-2">
           {data.badge}
         </div>
         <h2 className="font-serif text-5xl font-semibold [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">

@@ -16,13 +16,18 @@ const Navbar = () => {
     <div className="fixed top-0 w-full bg-white h-14 z-100">
       <div className=" h-14  w-fill flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]">
         <div className="flex items-center justify-center w-fit">
-<Link to="/">          <h1 className="font-serif text-2xl font-bold text-black ">LUXE</h1></Link>
+          <Link to="/">
+            {" "}
+            <h1 className="font-serif text-2xl font-bold text-black ">LUXE</h1>
+          </Link>
         </div>
         <div className="flex items-center justify-between w-26">
           <div className="flex gap-4 ">
             <Search className="cursor-pointer" strokeWidth={1} />
-            
-            <Link to="/cart"><ShoppingBag className="cursor-pointer" strokeWidth={1} /></Link>
+
+            <Link to="/cart">
+              <ShoppingBag className="cursor-pointer" strokeWidth={1} />
+            </Link>
           </div>
           <div
             onClick={() => {

@@ -1,3 +1,4 @@
+
 const CollectionsSection = ({ data }) => {
   return (
     <div className="group relative flex items-center justify-center overflow-hidden h-60 w-44 md:h-72 md:w-48 lg:w-60 lg:h-80 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer">
