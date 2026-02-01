@@ -12,7 +12,7 @@ const AddToCartBtn = () => {
     // auto-hide after 2 seconds
     setTimeout(() => {
       setShowNotification(false);
-    }, 3000);
+    }, 700);
   };
 
 
@@ -37,7 +37,7 @@ const AddToCartBtn = () => {
     <>
     <button
       onClick={() => {
-        handleAddToCart
+        handleAddToCart()
         AddToCart();
         
       }}
@@ -61,8 +61,8 @@ export const AddToCartNotification= ()=>{
 
   return (
 
-    <div className="h-200 bg-amber-200 w-full fixed top-200 left-0 z-50 flex items-center justify-center">
-      Added to cart ✅
+    <div className="h-10 bg-amber-200 w-full fixed top-14 left-0 z-50 flex items-center justify-center">
+      Successfully, Added to cart
     </div>
   )
 };
