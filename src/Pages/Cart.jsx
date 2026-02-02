@@ -13,7 +13,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col w-full min-h-[20rem] pt-2 mt-12 pb-3 bg-gray-200">
+    <div className="flex flex-col w-full min-h-80 pt-2 mt-12 pb-3 bg-gray-200">
       {/* Header */}
       <div className="flex flex-col gap-4 w-full pb-6 sm:pb-10 px-4 pt-6 sm:pt-8 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex flex-col gap-2 sm:gap-3 w-full sm:w-2/3">
@@ -44,7 +44,7 @@ const Cart = () => {
             return <CartProduct key={idx} itemData={e} idx={idx} />;
           })
         ) : (
-          <div className="min-h-[15rem] w-full flex justify-center items-center flex-col text-center px-4">
+          <div className="min-h-60 w-full flex justify-center items-center flex-col text-center px-4">
             <img
               src="src/assets/images/productpg/image1.png"
               alt="hello"

@@ -69,7 +69,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="mb-10 mt-14">
+    <div className="mb-10 pt-14">
       <Swiper
         pagination={{ dynamicBullets: true }}
         autoplay={{
